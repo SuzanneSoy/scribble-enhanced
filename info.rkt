@@ -11,7 +11,9 @@
                      "racket-doc"
                      "at-exp-lib"
                      "typed-racket-more"
-                     "typed-racket-doc"))
+                     "typed-racket-doc"
+                     "reprovide-lang"
+                     "mutable-match-lambda"))
 (define scribblings
   '(("scribblings/scribble-enhanced.scrbl" ())
     ("scribblings/scribble-enhanced-example.lp2.rkt" () (omit-start))
