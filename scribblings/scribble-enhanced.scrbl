@@ -83,3 +83,61 @@ The code above renders as follows:
   Example description
  }
 }
+
+@subsection{Arbitrary rewriting of code in @racket[racketblock] and similar}
+
+@defthing[#:kind "mutable-match-lambda"
+          mutable-match-element-id-transformer]{ As an example, it would be
+ possible to create a rewrite handler which turns the ⁰¹²³⁴⁵⁶⁷⁸⁹ unicode
+ superscripts at the end of identifiers into superscripts alongside the
+ base identifier.
+
+ This could be useful to typeset code using the @elem[#:style 'tt "xlist"]
+ package, which rewrites identifiers ending with a superscript to mean
+ repetition, so that @racket[(define-type three-ints (xList Integer³))] is
+ equivalent to @racket[(define-type three-ints (List Integer Integer Integer))].
+
+ @racketblock[
+ @(code:comment "Correctly display xyz⃰, xyzⁿ, xyz⁰, xyz¹, … xyz⁹")
+ (begin-for-syntax
+   (mutable-match-lambda-add-overriding-clause!
+    mutable-match-element-id-transformer
+    #:match-lambda
+    [(? identifier?
+        whole-id
+        (app (compose symbol->string syntax-e)
+             (pregexp #px"^(.*?)(⃰|ⁿ|[⁰¹²³⁴⁵⁶⁷⁸⁹]+)$"
+                      (list whole base power))))
+     (define/with-syntax base-id (format-id whole-id "~a" base))
+     (define/with-syntax power-characters
+       (string-join
+        (map (match-lambda ["⃰" "*"]
+                           ["ⁿ" "n"]
+                           ["⁰" "0"] ["¹" "1"] ["²" "2"] ["³" "3"] ["⁴" "4"]
+                           ["⁵" "5"] ["⁶" "6"] ["⁷" "7"] ["⁸" "8"] ["⁹" "9"])
+             (map string (string->list power)))))
+     #'(elem (list (racket base-id)
+                   (superscript power-characters)))]))]
+
+ Another use case would be a hack to correctly colour syntax classes from
+ syntax-parse, when used as @racket[attr:stxclass]. Here is how it would be
+ defined:
+
+ @racketblock[
+ (begin-for-syntax
+   (mutable-match-lambda-add-overriding-clause!
+    mutable-match-element-id-transformer
+    #:match-lambda
+    [(? identifier?
+        whole-id
+        (app (compose symbol->string syntax-e)
+             (pregexp #px"^([^:]*):([^:]*)$"
+                      (list whole attr cls))))
+     (define/with-syntax attr-id (format-id whole-id "~a" attr))
+     (define/with-syntax cls-id (format-id whole-id "~a" cls))
+     #'(elem (list (racket attr-id)
+                   (elem #:style 'tt ":")
+                   (racket cls-id)))]))]
+
+ The code for these two examles would be inserted directly inside the document,
+ before any @racket[racketblock], @racket[chunk] or similar.}
