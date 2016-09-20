@@ -1,4 +1,4 @@
-#lang racket/base
-
-(require scribble-enhanced/manual-form)
-(provide (all-from-out scribble-enhanced/manual-form))
+#lang reprovide
+scribble-enhanced/manual-form
+scribble-enhanced/manual-scheme
+scribble-enhanced/racket

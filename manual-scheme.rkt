@@ -1,13 +1,13 @@
 #lang racket/base
-(require "../decode.rkt"
-         "../struct.rkt"
-         "../scheme.rkt"
-         "../search.rkt"
-         "../basic.rkt"
-         (only-in "../core.rkt" style style-properties)
-         "manual-style.rkt"
-         "manual-utils.rkt" ;; used via datum->syntax
-         "on-demand.rkt"
+(require scribble/decode
+         scribble/struct
+         "racket.rkt";; was: "../scheme.rkt"
+         scribble/search
+         scribble/basic
+         (only-in scribble/core style style-properties)
+         scribble/private/manual-style
+         scribble/private/manual-utils ;; used via datum->syntax
+         scribble/private/on-demand
          (for-syntax racket/base)
          (for-label racket/base))
 

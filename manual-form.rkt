@@ -12,7 +12,7 @@
          scribble/private/qsloc
          scribble/private/manual-utils
          scribble/private/manual-vars
-         scribble/private/manual-scheme
+         "manual-scheme.rkt"
          scribble/private/manual-bind
          scheme/list
          syntax/parse/define
