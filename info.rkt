@@ -6,14 +6,14 @@
                "scheme-lib"
                "compatibility-lib"
                "slideshow-lib"
-               "typed-racket-lib"))
+               "typed-racket-lib"
+               "reprovide-lang"
+               "mutable-match-lambda"))
 (define build-deps '("scribble-lib"
                      "racket-doc"
                      "at-exp-lib"
                      "typed-racket-more"
-                     "typed-racket-doc"
-                     "reprovide-lang"
-                     "mutable-match-lambda"))
+                     "typed-racket-doc"))
 (define scribblings
   '(("scribblings/scribble-enhanced.scrbl" ())
     ("scribblings/scribble-enhanced-example.lp2.rkt" () (omit-start))
