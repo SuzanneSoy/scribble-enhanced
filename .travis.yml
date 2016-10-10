@@ -48,7 +48,7 @@ before_script:
 # `raco pkg install --deps search-auto` to install any required
 # packages without it getting stuck on a confirmation prompt.
 script:
- - raco test -x -p scribble-enhanced
+ - raco test -p scribble-enhanced
  - raco setup --check-pkg-deps --no-zo --no-launcher --no-install --no-post-install --no-docs --pkgs scribble-enhanced
 
 after_success:
