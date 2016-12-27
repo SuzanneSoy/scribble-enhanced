@@ -1005,6 +1005,9 @@
              (let ([slv (and (identifier? v)
                              (syntax-local-value v (lambda () #f)))])
                (cond
+                 [(and (syntax? v) (syntax-property v 'scribble-render))
+                  => (λ (renderer)
+                       (wrap-loc v #f (renderer v)))]
                  [(variable-id? slv)
                   (wrap-loc v #f `(,#'make-var-id ',(variable-id-sym slv)))]
                  [(element-id-transformer? slv)
