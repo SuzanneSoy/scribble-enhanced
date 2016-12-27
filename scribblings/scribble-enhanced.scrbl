@@ -87,7 +87,7 @@ The code above renders as follows:
 @subsection{Arbitrary rewriting of code in @racket[racketblock] and similar}
 
 @defthing[#:kind "mutable-match-lambda"
-          mutable-match-element-id-transformer]{ As an example, it would be
+          mutable-match-element-id-transformer]{As an example, it would be
  possible to create a rewrite handler which turns the ⁰¹²³⁴⁵⁶⁷⁸⁹ unicode
  superscripts at the end of identifiers into superscripts alongside the
  base identifier.
@@ -141,3 +141,13 @@ The code above renders as follows:
 
  The code for these two examles would be inserted directly inside the document,
  before any @racket[racketblock], @racket[chunk] or similar.}
+
+@defthing[#:kind "syntax property"
+          scribble-render]{
+ The @racket['scribble-render] syntax property can contain a function. It will
+ be called with the whole syntax object, and must return the syntax for
+ scribble code which will be used in place of that s-expression.
+
+ This feature is experimental, and may be changed in future versions
+
+ @history[#:added "0.2"]}
