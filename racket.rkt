@@ -483,7 +483,7 @@
                 c)))
            (advance c init-line! srcless-step)
            (out ";" comment-color)
-           (out 'nbsp comment-color)
+           ;(out 'nbsp comment-color)
            (let ([v (syntax->datum (cadr (syntax->list c)))])
              (if (paragraph? v)
                  (map (lambda (v) 
