@@ -195,7 +195,7 @@ The code above renders as follows:
  @racket[(racketblock a x y z c)].
 
  As an example, here is the @racket['scribble-render-as] procedure used by
- @racketmodname[aful], to render the lambda shorthand notation
+ @racketmodname[aful #:indirect], to render the lambda shorthand notation
  @racket["#λ(+ % 1)"]:
 
  @racketblock[
