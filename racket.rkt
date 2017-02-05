@@ -989,7 +989,7 @@
 
 (define-syntax (define-code stx)
   (syntax-case stx ()
-    [(_ code typeset-code uncode d->s stx-prop)
+    [(the-id code typeset-code uncode d->s stx-prop)
      (syntax/loc stx
        (define-syntax (code stx)
          (define (wrap-loc v ctx e)
@@ -1008,6 +1008,19 @@
                  [(and (syntax? v) (syntax-property v 'scribble-render))
                   => (λ (renderer)
                        (wrap-loc v #f (renderer v)))]
+                 [(and (syntax? v) (syntax-property v 'scribble-render-as))
+                  => (λ (renderer)
+                       (stx->loc-s-expr
+                        (with-syntax ([splice
+                                       (renderer v
+                                                 (quote-syntax the-id)
+                                                 (quote-syntax code)
+                                                 (quote-syntax typeset-code)
+                                                 (quote-syntax uncode)
+                                                 (quote-syntax d->s)
+                                                 (quote-syntax stx-prop))])
+                          (syntax/loc #'splice
+                            (code:line . splice)))))]
                  [(variable-id? slv)
                   (wrap-loc v #f `(,#'make-var-id ',(variable-id-sym slv)))]
                  [(element-id-transformer? slv)

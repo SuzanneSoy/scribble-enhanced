@@ -1,6 +1,8 @@
 #lang scribble/manual
-@require[@for-label[scribble-enhanced
-                    racket/base]
+@require[@for-label[(except-in scribble-enhanced define-code)
+                    racket/base
+                    (only-in scribble/racket define-code)
+                    (only-in syntax/stx stx-list?)]
          scribble-enhanced]
 
 @title{Scribble Enhanced}
@@ -148,6 +150,69 @@ The code above renders as follows:
  be called with the whole syntax object, and must return the syntax for
  scribble code which will be used in place of that s-expression.
 
- This feature is experimental, and may be changed in future versions
+ This feature is experimental, and may be changed in future versions.
 
- @history[#:added "0.2"]}
+ @history[#:added "0.2"
+          #:changed "0.3"
+          @elem{Deprecated in favour of @racket[scribble-render-as].}]
+
+ @deprecated[#:what "syntax property"
+             @racket[scribble-render-as]]{
+  Deprecated as of @racketmodname[scribble-enhanced] version 0.3, because
+  @racket['scribble-render] only supports single-line replacements. The new
+  @racket['scribble-render-as] property is more flexible.}}
+
+@defthing[#:kind "syntax property"
+          scribble-render-as]{
+ The @racket['scribble-render-as] syntax property can contain a function. It
+ will be called with six argumens:
+
+ @defproc[(scribble-render-as-proc
+           [self syntax?]
+           [id identifier?]
+           [typeset-expr syntax?]
+           [uncode-id identifier?]
+           [d->s-expr syntax?]
+           [stx-prop-expr syntax?])
+          stx-list?]{}
+                                                                   
+ The first argument, @racket[self], is the whole syntax object bearing the
+ @racket['scribble-render-as] property. The other arguments are the (quoted
+ syntax form of) the arguments passed to the @racket[define-code] macro which
+ generated the form currently rendering the code. The most useful argument is
+ @racket[uncode], indicating which identifier should be used in place of
+ @racket[unsyntax] to escape the current form, which will be
+ @racket[racketblock], @racket[RACKETBLOCK] or another similar form.
+
+ The function must return a syntax object which will be spliced in place of the
+ original when rendering. Note that the returned syntax object will be spliced,
+ i.e. the outer pair of parentheses removed. If the original syntax object must
+ be replaced by @racket[foo], then @racket[#'foo] must be returned. The splicing
+ operation allows several tokens to be rendered. For example, in
+ @racket[(racketblock a b c)], if @racket[b] has the
+ @racket['scribble-render-as] property, and the function returns
+ @racket[#'(x y z)], then the whole form will be rendered like
+ @racket[(racketblock a x y z c)].
+
+ As an example, here is the @racket['scribble-render-as] procedure used by
+ @racketmodname[aful], to render the lambda shorthand notation
+ @racket["#λ(+ % 1)"]:
+
+ @racketblock[
+ (define (aful-scribble-render self id code typeset-code uncode d->s stx-prop)
+   (syntax-case self ()
+     (code:comment "#λ(body) reads as:")
+     (code:comment "(lambda args")
+     (code:comment "  (define-syntax % (make-rename-transformer #'%1))")
+     (code:comment "  body)")
+     [(_ _ _ body)
+      (with-syntax ([uncode (datum->syntax uncode (syntax-e uncode) self)])
+        (syntax/top-loc self
+          ((uncode(seclink "_lang_aful"
+                           #:doc '(lib "aful/docs/aful.scrbl")
+                           (tt "#λ")))
+           body)))]))]
+
+ This feature is experimental, and may be changed in future versions.
+
+ @history[#:added "0.3"]}
