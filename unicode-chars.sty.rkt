@@ -51,6 +51,7 @@
 \DeclareUnicodeCharacter{03B5}{\ensuremath{\varepsilon}}%          ε
 \DeclareUnicodeCharacter{0395}{\ensuremath{\Epsilon}}%             Ε
 \DeclareUnicodeCharacter{03BB}{\ensuremath{\lambda}}%              λ
+\DeclareUnicodeCharacter{039B}{\ensuremath{\Lambda}}%              Λ
 \DeclareUnicodeCharacter{03C1}{\ensuremath{\rho}}%                 ρ
 \DeclareUnicodeCharacter{03A1}{\ensuremath{\Rho}}%                 Ρ
 \DeclareUnicodeCharacter{2190}{\ensuremath{\leftarrow}}%           ←
