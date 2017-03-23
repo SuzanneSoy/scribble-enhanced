@@ -2,6 +2,23 @@
 (provide unicode-chars)
 (define unicode-chars
   @string-append|<<<{
+\usepackage{savesym}
+\savesymbol{iint}
+\savesymbol{iiint}
+\savesymbol{dddot}
+\savesymbol{ddddot}
+\savesymbol{overleftrightarrow}
+\savesymbol{underrightarrow}
+\savesymbol{underleftarrow}
+\savesymbol{underleftrightarrow}
+\usepackage{amsmath}
+\restoresymbol{ams}{iint}
+\restoresymbol{ams}{iiint}
+\restoresymbol{ams}{dddot}
+\restoresymbol{ams}{ddddot}
+\restoresymbol{ams}{underrightarrow}
+\restoresymbol{ams}{underleftarrow}
+\restoresymbol{ams}{underleftrightarrow}
 \makeatletter
 % Must be loaded after MnSymbol!!! MnSymbol improperly defines × and ¬ in such a
 %   way that they don't work in math mode.
@@ -14,7 +31,7 @@
 %     entering-unicode-math-symbols-into-latex-direct-from-keyboard-on-a-mac)
 % https://github.com/clange/latex
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
-\ProvidesPackage{unicode-chars}[2013/10/08]
+%\ProvidesPackage{unicode-chars}[2013/10/08]
 
 %\DeclareUnicodeCharacter{00A0}{~}%                                  
 %\DeclareUnicodeCharacter{00A3}{\pounds}%                          £
@@ -82,6 +99,7 @@
 \DeclareUnicodeCharacter{2248}{\ensuremath{\approx}}%              ≈
 \DeclareUnicodeCharacter{2260}{\ensuremath{\ne}}%                  ≠
 \DeclareUnicodeCharacter{2261}{\ensuremath{\equiv}}%               ≡
+\DeclareUnicodeCharacter{2262}{\ensuremath{\not\equiv}}%           ≢
 \DeclareUnicodeCharacter{2264}{\ensuremath{\le}}%                  ≤
 \DeclareUnicodeCharacter{2265}{\ensuremath{\ge}}%                  ≥
 \DeclareUnicodeCharacter{2286}{\ensuremath{\subseteq}}%            ⊆
@@ -146,6 +164,9 @@
 \DeclareUnicodeCharacter{2099}{\ensuremath{_n}}%                   ₙ
 \DeclareUnicodeCharacter{1D62}{\ensuremath{_i}}%                   ᵢ
 \DeclareUnicodeCharacter{2C7C}{\ensuremath{_j}}%                   ⱼ
+\DeclareUnicodeCharacter{2096}{\ensuremath{_k}}%                   ₖ
+\DeclareUnicodeCharacter{2097}{\ensuremath{_l}}%                   ₗ
+\DeclareUnicodeCharacter{209B}{\ensuremath{_s}}%                   ₛ
 %
 \DeclareUnicodeCharacter{2070}{\ensuremath{^0}}%                   ⁰
 %\DeclareUnicodeCharacter{00B9}{\ensuremath{^1}}%                   ¹
