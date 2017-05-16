@@ -41,18 +41,15 @@
 \DeclareUnicodeCharacter{00A3}{\pounds}%                           £
 \DeclareUnicodeCharacter{00AB}{%
  \ifmmode\textrm{\guillemotleft}\else\guillemotleft\fi}%«
+% Declared by MnSymbol:
 \DeclareUnicodeCharacter{00AC}{\ensuremath{\neg}}%                 ¬
 \DeclareUnicodeCharacter{00AE}{\textsuperscript{\textregistered}}% ®
 \DeclareUnicodeCharacter{00AF}{\ensuremath{^-}}%                   ¯
 \DeclareUnicodeCharacter{00BB}{%
  \ifmmode\textrm{\guillemotright}\else\guillemotright\fi}%»
+% Declared by MnSymbol:
 \DeclareUnicodeCharacter{00D7}{\ensuremath{\times}}%               ×
 \DeclareUnicodeCharacter{00F1}{{\ifmmode\tilde{n}\else\~{n}\fi}}%  ñ
-
-\DeclareUnicodeCharacter{00F1}{{\ifmmode\tilde{n}\else\~{n}\fi}}
-% Declared by MnSymbol:
-\DeclareUnicodeCharacter{00D7}{\ensuremath{\times}}
-\DeclareUnicodeCharacter{00AC}{\ensuremath{\neg}}
 
 \DeclareUnicodeCharacter{0101}{\=a}%                               ā
 \DeclareUnicodeCharacter{0123}{\c g}%                              ģ
