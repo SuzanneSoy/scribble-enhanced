@@ -2,6 +2,10 @@
 (provide unicode-chars)
 (define unicode-chars
   @string-append|<<<{
+\input glyphtounicode
+\pdfgentounicode=1
+\usepackage{accsupp}
+%$\BeginAccSupp{method=hex,unicode,ActualText=2200}∀\EndAccSupp{} \BeginAccSupp{method=hex,unicode,ActualText=2192}→\EndAccSupp{}$
 \usepackage{savesym}
 \savesymbol{iint}
 \savesymbol{iiint}
@@ -66,7 +70,7 @@
 \DeclareUnicodeCharacter{03C1}{\ensuremath{\rho}}%                 ρ
 \DeclareUnicodeCharacter{03A1}{\ensuremath{\Rho}}%                 Ρ
 \DeclareUnicodeCharacter{2190}{\ensuremath{\leftarrow}}%           ←
-\DeclareUnicodeCharacter{2192}{\ensuremath{\rightarrow}}%          →
+\DeclareUnicodeCharacter{2192}{\ensuremath{\BeginAccSupp{method=hex,unicode,ActualText=2192}\rightarrow\EndAccSupp{}}}%          →
 % 2192: \textrightarrow is not available in all fonts,
 % and we need the right arrow in math mode
 \DeclareUnicodeCharacter{2193}{\ensuremath{\downarrow}}%           ↓
@@ -75,7 +79,7 @@
 \DeclareUnicodeCharacter{21C0}{\ensuremath{\rightharpoonup}}%      ⇀
 \DeclareUnicodeCharacter{21D2}{\ensuremath{\Rightarrow}}%          ⇒
 % Georges — added \operatorname{} in ∀ .
-\DeclareUnicodeCharacter{2200}{\ensuremath{\operatorname{\forall}}}% ∀
+\DeclareUnicodeCharacter{2200}{\ensuremath{\operatorname{\BeginAccSupp{method=hex,unicode,ActualText=2200}\forall\EndAccSupp{}}}}% ∀
 \DeclareUnicodeCharacter{2203}{\ensuremath{\exists}}%              ∃
 \DeclareUnicodeCharacter{2208}{\ensuremath{\in}}%                  ∈
 \DeclareUnicodeCharacter{2209}{\ensuremath{\not\in}}%              ∉
@@ -140,7 +144,7 @@
 \DeclareUnicodeCharacter{2A05}{\ensuremath{\bigsqcap}}%            ⨅
 \DeclareUnicodeCharacter{2A06}{\ensuremath{\bigsqcup}}%            ⨆
 \DeclareUnicodeCharacter{2080}{\ensuremath{_0}}%                   ₀
-\DeclareUnicodeCharacter{2081}{\ensuremath{_1}}%                   ₁
+\DeclareUnicodeCharacter{2081}{\ensuremath{\BeginAccSupp{method=hex,unicode,ActualText=2081}_1\EndAccSupp{}}}%                   ₁
 \DeclareUnicodeCharacter{2082}{\ensuremath{_2}}%                   ₂
 \DeclareUnicodeCharacter{2083}{\ensuremath{_3}}%                   ₃
 \DeclareUnicodeCharacter{2084}{\ensuremath{_4}}%                   ₄
