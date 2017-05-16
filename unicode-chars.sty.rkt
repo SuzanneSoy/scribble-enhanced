@@ -33,23 +33,17 @@
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
 %\ProvidesPackage{unicode-chars}[2013/10/08]
 
-%\DeclareUnicodeCharacter{00A0}{~}%                                  
-%\DeclareUnicodeCharacter{00A3}{\pounds}%                          £
-%\DeclareUnicodeCharacter{00AC}{\ensuremath{\neg}}                 ¬
-%\DeclareUnicodeCharacter{00AE}{\textsuperscript{\textregistered}}%®
-%\DeclareUnicodeCharacter{00AF}{\ensuremath{^-}}%                  ¯
-%\DeclareUnicodeCharacter{00D7}{\ensuremath{\times}}%              ×
-
-%%%%%%%%%%%%%%%%%%%%%%%%% vvv % NO-BREAK SPACE here (unicode 00A0)
-\catcode`\^^a0=13\relax\def {~}%                                   " " (nbsp)
-\catcode`\^^a3=13\relax\def£{\pounds}%                             £
-\catcode`\^^ae=13\relax\def®{\textsuperscript{\textregistered}}%   ®
-% macron: overline, overbar
-\catcode`\^^af=13\relax\def¯{\ensuremath{^-}}%                     ¯ % macron
-% \catcode`\^^f1=13\relax\defñ{\~{n}}%                               ñ
-% Declared by MnSymbol:
-% \catcode`\^^d7=13\relax\def×{\ensuremath{\times}}%                 ×
-% \catcode`\^^ac=13\relax\def¬{\ensuremath{\neg}}\relax%               ¬
+\DeclareUnicodeCharacter{00A0}{~}%                                 " " (nbsp)
+\DeclareUnicodeCharacter{00A3}{\pounds}%                           £
+\DeclareUnicodeCharacter{00AB}{%
+ \ifmmode\textrm{\guillemotleft}\else\guillemotleft\fi}%«
+\DeclareUnicodeCharacter{00AC}{\ensuremath{\neg}}%                 ¬
+\DeclareUnicodeCharacter{00AE}{\textsuperscript{\textregistered}}% ®
+\DeclareUnicodeCharacter{00AF}{\ensuremath{^-}}%                   ¯
+\DeclareUnicodeCharacter{00BB}{%
+ \ifmmode\textrm{\guillemotright}\else\guillemotright\fi}%»
+\DeclareUnicodeCharacter{00D7}{\ensuremath{\times}}%               ×
+\DeclareUnicodeCharacter{00F1}{{\ifmmode\tilde{n}\else\~{n}\fi}}%  ñ
 
 \DeclareUnicodeCharacter{00F1}{{\ifmmode\tilde{n}\else\~{n}\fi}}
 % Declared by MnSymbol:
@@ -162,6 +156,7 @@
 \DeclareUnicodeCharacter{208E}{\ensuremath{_)}}%                   ₎
 \DeclareUnicodeCharacter{2098}{\ensuremath{_m}}%                   ₘ
 \DeclareUnicodeCharacter{2099}{\ensuremath{_n}}%                   ₙ
+\DeclareUnicodeCharacter{2095}{\ensuremath{_h}}%                   ₕ
 \DeclareUnicodeCharacter{1D62}{\ensuremath{_i}}%                   ᵢ
 \DeclareUnicodeCharacter{2C7C}{\ensuremath{_j}}%                   ⱼ
 \DeclareUnicodeCharacter{2096}{\ensuremath{_k}}%                   ₖ
@@ -247,5 +242,7 @@
 \DeclareUnicodeCharacter{1D4CD}{\ensuremath{\mathcal{x}}}%         𝓍
 \DeclareUnicodeCharacter{1D4CE}{\ensuremath{\mathcal{y}}}%         𝓎
 \DeclareUnicodeCharacter{1D4CF}{\ensuremath{\mathcal{z}}}%         𝓏
+\DeclareUnicodeCharacter{220C}{\ensuremath{\not\ni}}%              ∌
+\DeclareUnicodeCharacter{220B}{\ensuremath{\ni}}%                  ∋
 \makeatother
 }>>>|)
