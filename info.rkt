@@ -16,7 +16,7 @@
                      "typed-racket-doc"
                      "scribble-doc"))
 (define scribblings
-  '(("scribblings/scribble-enhanced.scrbl" ())
+  '(("scribblings/scribble-enhanced.scrbl" () ("Scribble Libraries"))
     ("scribblings/scribble-enhanced-example.lp2.rkt" () (omit-start))
     ("scribblings/scribble-enhanced-template.lp2.rkt" () (omit-start))))
 (define compile-omit-paths '("resources/"))
