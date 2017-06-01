@@ -245,5 +245,10 @@
 \DeclareUnicodeCharacter{1D4CF}{\ensuremath{\mathcal{z}}}%         𝓏
 \DeclareUnicodeCharacter{220C}{\ensuremath{\not\ni}}%              ∌
 \DeclareUnicodeCharacter{220B}{\ensuremath{\ni}}%                  ∋
+\DeclareUnicodeCharacter{2008}{\,}%                            Punctuation space
+\DeclareUnicodeCharacter{2032}{\ensuremath{'}}%                    ′ (Prime)
+\DeclareUnicodeCharacter{2033}{\ensuremath{''}}%                   ″ (2x Prime)
+\DeclareUnicodeCharacter{2034}{\ensuremath{'''}}%                  ‴ (3x Prime)
+\DeclareUnicodeCharacter{2057}{\ensuremath{''''}}%                 ⁗ (4x Prime)
 \makeatother
 }>>>|)
