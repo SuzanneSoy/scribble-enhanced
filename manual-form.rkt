@@ -205,26 +205,12 @@
                          (if (and (identifier? spec)
                                   (free-identifier=? spec #'defined-id))
                              (datum->syntax #'here '(unsyntax x) spec spec)
-                             (syntax-case spec ()
+                             #;(syntax-case spec ()
                                [(a . b)
                                 (datum->syntax spec
                                                (cons (loop #'a) (loop #'b))
                                                spec
                                                spec)]
-                               [id
-                                (and (identifier? #'id)
-                                     (or (free-identifier=? #'id #'quote)
-                                         (free-identifier=? #'id #'unquote)
-                                         (free-identifier=? #'id #'quasiquote)))
-                                (if (= (source-location-span #'id) 1)
-                                    (datum->syntax #'here
-                                                   `(unsyntax ',(syntax-e #'id))
-                                                   spec
-                                                   spec)
-                                    (datum->syntax #'here
-                                                   `(unsyntax (RACKET ,(syntax-e #'id)))
-                                                   spec
-                                                   spec))]
                                [id
                                 (and (identifier? #'id)
                                      (or (free-identifier=? #'id #'syntax)
@@ -238,8 +224,43 @@
                                     (datum->syntax #'here
                                                    `(unsyntax (RACKET ,(syntax-e #'id)))
                                                    spec
+                                                   spec))])
+
+
+                             (cond
+                               [(and (identifier? spec)
+                                     (or (free-identifier=? spec #'quote)
+                                         (free-identifier=? spec #'unquote)
+                                         (free-identifier=? spec #'quasiquote)))
+                                (if (= (source-location-span spec) 1)
+                                    (datum->syntax #'here
+                                                   `(unsyntax ',(syntax-e spec))
+                                                   spec
+                                                   spec)
+                                    (datum->syntax #'here
+                                                   `(unsyntax (RACKET ,(syntax-e spec)))
+                                                   spec
                                                    spec))]
-                               [_ spec]))))]
+                               [(and (identifier? spec)
+                                     (or (free-identifier=? spec #'syntax)
+                                         (free-identifier=? spec #'unsyntax)
+                                         (free-identifier=? spec #'quasisyntax)))
+                                (if (= (source-location-span spec) 2)
+                                    (datum->syntax #'here
+                                                   `(unsyntax ',(syntax-e spec))
+                                                   spec
+                                                   spec)
+                                    (datum->syntax #'here
+                                                   `(unsyntax (RACKET ,(syntax-e spec)))
+                                                   spec
+                                                   spec))]
+                               [(syntax? spec) (datum->syntax spec
+                                                              (loop (syntax-e spec))
+                                                              spec
+                                                              spec)]
+                               [(pair? spec) (cons (loop (car spec))
+                                                   (loop (cdr spec)))]
+                               [else spec]))))]
                     [(maybe-result ...) (if (attribute results)
                                             #'(results.result ...)
                                             (map (λ _ #'())
