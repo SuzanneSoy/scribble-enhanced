@@ -5,7 +5,9 @@
 \input glyphtounicode
 \pdfgentounicode=1
 \usepackage{accsupp}
-%$\BeginAccSupp{method=hex,unicode,ActualText=2200}∀\EndAccSupp{} \BeginAccSupp{method=hex,unicode,ActualText=2192}→\EndAccSupp{}$
+%$\BeginAccSupp{method=hex,unicode,ActualText=2200}∀\EndAccSupp{}
+% \BeginAccSupp{method=hex,unicode,ActualText=2192}→\EndAccSupp{}$
+\usepackage{bbold}
 \usepackage{savesym}
 \savesymbol{iint}
 \savesymbol{iiint}
@@ -23,6 +25,15 @@
 \restoresymbol{ams}{underrightarrow}
 \restoresymbol{ams}{underleftarrow}
 \restoresymbol{ams}{underleftrightarrow}
+\savesymbol{ulcorner}
+\savesymbol{urcorner}
+\savesymbol{llcorner}
+\savesymbol{lrcorner}
+\usepackage{amsfonts}
+\restoresymbol{ams}{ulcorner}
+\restoresymbol{ams}{urcorner}
+\restoresymbol{ams}{llcorner}
+\restoresymbol{ams}{lrcorner}
 \makeatletter
 % Must be loaded after MnSymbol!!! MnSymbol improperly defines × and ¬ in such a
 %   way that they don't work in math mode.
@@ -250,5 +261,47 @@
 \DeclareUnicodeCharacter{2033}{\ensuremath{''}}%                   ″ (2x Prime)
 \DeclareUnicodeCharacter{2034}{\ensuremath{'''}}%                  ‴ (3x Prime)
 \DeclareUnicodeCharacter{2057}{\ensuremath{''''}}%                 ⁗ (4x Prime)
+\DeclareUnicodeCharacter{1D538}{\ensuremath{\mathbb{A}}}%          𝔸
+\DeclareUnicodeCharacter{1D539}{\ensuremath{\mathbb{B}}}%          𝔹
+\DeclareUnicodeCharacter{2102}{\ensuremath{\mathbb{C}}}%           ℂ
+\DeclareUnicodeCharacter{1D53B}{\ensuremath{\mathbb{D}}}%          𝔻
+\DeclareUnicodeCharacter{1D53C}{\ensuremath{\mathbb{E}}}%          𝔼
+\DeclareUnicodeCharacter{1D53D}{\ensuremath{\mathbb{F}}}%          𝔽
+\DeclareUnicodeCharacter{1D53E}{\ensuremath{\mathbb{G}}}%          𝔾
+\DeclareUnicodeCharacter{210D}{\ensuremath{\mathbb{H}}}%           ℍ
+\DeclareUnicodeCharacter{1D540}{\ensuremath{\mathbb{I}}}%          𝕀
+\DeclareUnicodeCharacter{1D541}{\ensuremath{\mathbb{J}}}%          𝕁
+\DeclareUnicodeCharacter{1D542}{\ensuremath{\mathbb{K}}}%          𝕂
+\DeclareUnicodeCharacter{1D543}{\ensuremath{\mathbb{L}}}%          𝕃
+\DeclareUnicodeCharacter{1D544}{\ensuremath{\mathbb{M}}}%          𝕄
+\DeclareUnicodeCharacter{2115}{\ensuremath{\mathbb{N}}}%           ℕ
+\DeclareUnicodeCharacter{1D546}{\ensuremath{\mathbb{O}}}%          𝕆
+\DeclareUnicodeCharacter{2119}{\ensuremath{\mathbb{P}}}%           ℙ
+\DeclareUnicodeCharacter{211A}{\ensuremath{\mathbb{Q}}}%           ℚ
+\DeclareUnicodeCharacter{211D}{\ensuremath{\mathbb{R}}}%           ℝ
+\DeclareUnicodeCharacter{1D54A}{\ensuremath{\mathbb{S}}}%          𝕊
+\DeclareUnicodeCharacter{1D54B}{\ensuremath{\mathbb{T}}}%          𝕋
+\DeclareUnicodeCharacter{1D54C}{\ensuremath{\mathbb{U}}}%          𝕌
+\DeclareUnicodeCharacter{1D54D}{\ensuremath{\mathbb{V}}}%          𝕍
+\DeclareUnicodeCharacter{1D54E}{\ensuremath{\mathbb{W}}}%          𝕎
+\DeclareUnicodeCharacter{1D54F}{\ensuremath{\mathbb{X}}}%          𝕏
+\DeclareUnicodeCharacter{1D550}{\ensuremath{\mathbb{Y}}}%          𝕐
+\DeclareUnicodeCharacter{2124}{\ensuremath{\mathbb{Z}}}%           ℤ
+\DeclareUnicodeCharacter{213C}{\ensuremath{\mathbb{\pi}}}%         ℼ
+\DeclareUnicodeCharacter{213D}{\ensuremath{\mathbb{\gamma}}}%      ℽ
+\DeclareUnicodeCharacter{213E}{\ensuremath{\mathbb{\Gamma}}}%      ℾ
+\DeclareUnicodeCharacter{213F}{\ensuremath{\mathbb{\Pi}}}%         ℿ
+\DeclareUnicodeCharacter{2140}{\ensuremath{\mathbb{\Sigma}}}%      ⅀
+\DeclareUnicodeCharacter{1D7D8}{\ensuremath{\mathbb{0}}}%          𝟘
+\DeclareUnicodeCharacter{1D7D9}{\ensuremath{\mathbb{1}}}%          𝟙
+\DeclareUnicodeCharacter{1D7DA}{\ensuremath{\mathbb{2}}}%          𝟚
+\DeclareUnicodeCharacter{1D7DB}{\ensuremath{\mathbb{3}}}%          𝟛
+\DeclareUnicodeCharacter{1D7DC}{\ensuremath{\mathbb{4}}}%          𝟜
+\DeclareUnicodeCharacter{1D7DD}{\ensuremath{\mathbb{5}}}%          𝟝
+\DeclareUnicodeCharacter{1D7DE}{\ensuremath{\mathbb{6}}}%          𝟞
+\DeclareUnicodeCharacter{1D7DF}{\ensuremath{\mathbb{7}}}%          𝟟
+\DeclareUnicodeCharacter{1D7E0}{\ensuremath{\mathbb{8}}}%          𝟠
+\DeclareUnicodeCharacter{1D7E1}{\ensuremath{\mathbb{9}}}%          𝟡
+\DeclareUnicodeCharacter{03C4}{\ensuremath{\tau}}%                 τ
 \makeatother
 }>>>|)
