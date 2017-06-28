@@ -109,7 +109,9 @@
 \DeclareUnicodeCharacter{2264}{\ensuremath{\le}}%                  ≤
 \DeclareUnicodeCharacter{2265}{\ensuremath{\ge}}%                  ≥
 \DeclareUnicodeCharacter{2286}{\ensuremath{\subseteq}}%            ⊆
+\DeclareUnicodeCharacter{2282}{\ensuremath{\subset}}%              ⊂
 \DeclareUnicodeCharacter{2287}{\ensuremath{\supseteq}}%            ⊇
+\DeclareUnicodeCharacter{2283}{\ensuremath{\supset}}%              ⊃
 \DeclareUnicodeCharacter{219D}{\ensuremath{\leadsto}}%             ↝
 \@ifpackageloaded{MnSymbol}{%
 \DeclareUnicodeCharacter{2295}{\ensuremath{\oplus}}%               ⊕
@@ -193,7 +195,7 @@
 \DeclareUnicodeCharacter{207F}{\ensuremath{^n}}%                   ⁿ
 \DeclareUnicodeCharacter{2071}{\ensuremath{^i}}%                   ⁱ
 %s
-% \DeclareUnicodeCharacter{2026}{\ensuremath{\dots}}%                …
+\DeclareUnicodeCharacter{2026}{\ensuremath{\dots}}%                …
 
 % Generated from ~/.XCompose using:
 % cat /tmp/cal.txt | cut -d '"' -f 2- | tr '"' ' ' | cut -d ' ' -f 1,6 \
@@ -303,5 +305,7 @@
 \DeclareUnicodeCharacter{1D7E0}{\ensuremath{\mathbb{8}}}%          𝟠
 \DeclareUnicodeCharacter{1D7E1}{\ensuremath{\mathbb{9}}}%          𝟡
 \DeclareUnicodeCharacter{03C4}{\ensuremath{\tau}}%                 τ
+\DeclareUnicodeCharacter{221E}{\ensuremath{\infty}}%               ∞
+\DeclareUnicodeCharacter{219B}{\ensuremath{\nrightarrow}}%         ↛
 \makeatother
 }>>>|)
