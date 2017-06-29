@@ -194,6 +194,8 @@
 \DeclareUnicodeCharacter{207E}{\ensuremath{^)}}%                   ⁾
 \DeclareUnicodeCharacter{207F}{\ensuremath{^n}}%                   ⁿ
 \DeclareUnicodeCharacter{2071}{\ensuremath{^i}}%                   ⁱ
+\DeclareUnicodeCharacter{02B2}{\ensuremath{^j}}%                   ʲ
+\DeclareUnicodeCharacter{1D4F}{\ensuremath{^k}}%                   ᵏ
 %s
 \DeclareUnicodeCharacter{2026}{\ensuremath{\dots}}%                …
 
@@ -304,8 +306,38 @@
 \DeclareUnicodeCharacter{1D7DF}{\ensuremath{\mathbb{7}}}%          𝟟
 \DeclareUnicodeCharacter{1D7E0}{\ensuremath{\mathbb{8}}}%          𝟠
 \DeclareUnicodeCharacter{1D7E1}{\ensuremath{\mathbb{9}}}%          𝟡
+\DeclareUnicodeCharacter{1D552}{\ensuremath{\mathbb{a}}}%          𝕒
+\DeclareUnicodeCharacter{1D553}{\ensuremath{\mathbb{b}}}%          𝕓
+\DeclareUnicodeCharacter{1D554}{\ensuremath{\mathbb{c}}}%          𝕔
+\DeclareUnicodeCharacter{1D555}{\ensuremath{\mathbb{d}}}%          𝕕
+\DeclareUnicodeCharacter{1D556}{\ensuremath{\mathbb{e}}}%          𝕖
+\DeclareUnicodeCharacter{1D557}{\ensuremath{\mathbb{f}}}%          𝕗
+\DeclareUnicodeCharacter{1D558}{\ensuremath{\mathbb{g}}}%          𝕘
+\DeclareUnicodeCharacter{1D559}{\ensuremath{\mathbb{h}}}%          𝕙
+\DeclareUnicodeCharacter{1D55A}{\ensuremath{\mathbb{i}}}%          𝕚
+\DeclareUnicodeCharacter{1D55B}{\ensuremath{\mathbb{j}}}%          𝕛
+\DeclareUnicodeCharacter{1D55C}{\ensuremath{\mathbb{k}}}%          𝕜
+\DeclareUnicodeCharacter{1D55D}{\ensuremath{\mathbb{l}}}%          𝕝
+\DeclareUnicodeCharacter{1D55E}{\ensuremath{\mathbb{m}}}%          𝕞
+\DeclareUnicodeCharacter{1D55F}{\ensuremath{\mathbb{n}}}%          𝕟
+\DeclareUnicodeCharacter{1D560}{\ensuremath{\mathbb{o}}}%          𝕠
+\DeclareUnicodeCharacter{1D561}{\ensuremath{\mathbb{p}}}%          𝕡
+\DeclareUnicodeCharacter{1D562}{\ensuremath{\mathbb{q}}}%          𝕢
+\DeclareUnicodeCharacter{1D563}{\ensuremath{\mathbb{r}}}%          𝕣
+\DeclareUnicodeCharacter{1D564}{\ensuremath{\mathbb{s}}}%          𝕤
+\DeclareUnicodeCharacter{1D565}{\ensuremath{\mathbb{t}}}%          𝕥
+\DeclareUnicodeCharacter{1D566}{\ensuremath{\mathbb{u}}}%          𝕦
+\DeclareUnicodeCharacter{1D567}{\ensuremath{\mathbb{v}}}%          𝕧
+\DeclareUnicodeCharacter{1D568}{\ensuremath{\mathbb{w}}}%          𝕨
+\DeclareUnicodeCharacter{1D569}{\ensuremath{\mathbb{x}}}%          𝕩
+\DeclareUnicodeCharacter{1D56A}{\ensuremath{\mathbb{y}}}%          𝕪
+\DeclareUnicodeCharacter{1D56B}{\ensuremath{\mathbb{z}}}%          𝕫
 \DeclareUnicodeCharacter{03C4}{\ensuremath{\tau}}%                 τ
 \DeclareUnicodeCharacter{221E}{\ensuremath{\infty}}%               ∞
 \DeclareUnicodeCharacter{219B}{\ensuremath{\nrightarrow}}%         ↛
+\DeclareUnicodeCharacter{3C5}{\ensuremath{\upsilon}}%              υ
+\DeclareUnicodeCharacter{1D50}{\ensuremath{^m}}%                   ᵐ
+\DeclareUnicodeCharacter{2205}{\ensuremath{\emptyset}}%            ∅
+\DeclareUnicodeCharacter{3C3}{\ensuremath{\sigma}}%                σ
 \makeatother
 }>>>|)
