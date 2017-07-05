@@ -339,5 +339,10 @@
 \DeclareUnicodeCharacter{1D50}{\ensuremath{^m}}%                   ᵐ
 \DeclareUnicodeCharacter{2205}{\ensuremath{\emptyset}}%            ∅
 \DeclareUnicodeCharacter{3C3}{\ensuremath{\sigma}}%                σ
+\DeclareUnicodeCharacter{2254}{\ensuremath{\coloneqq}}%            ≔
+\DeclareUnicodeCharacter{2A74}{\ensuremath{\Coloneqq}}%            ⩴
+\DeclareUnicodeCharacter{2184}{\ensuremath{$\reflectbox{$c$}$}}%   ↄ % TODO: \ifmmode
+\DeclareUnicodeCharacter{A7FB}{\ensuremath{$\reflectbox{$F$}$}}%   ꟻ
+\DeclareUnicodeCharacter{A7FB}{\ensuremath{$\raisebox{\depth}{\rotatebox{180}{a}}$}}%   ɐ % TODO: \ifmmode
 \makeatother
 }>>>|)
