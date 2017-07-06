@@ -353,5 +353,9 @@
 \DeclareUnicodeCharacter{3BA}{\ensuremath{\kappa}}%                κ
 \DeclareUnicodeCharacter{3B7}{\ensuremath{\eta}}%                  η
 \DeclareUnicodeCharacter{22A4}{\ensuremath{\top}}%                 ⊤
+\DeclareUnicodeCharacter{3C0}{\ensuremath{\pi}}%                   π
+\DeclareUnicodeCharacter{3A0}{\ensuremath{\Pi}}%                   Π
+\DeclareUnicodeCharacter{2216}{\ensuremath{\setminus}}%            ∖
+\DeclareUnicodeCharacter{22A5}{\ensuremath{\bot}}%                 ⊥
 \makeatother
 }>>>|)
