@@ -34,6 +34,7 @@
 \restoresymbol{ams}{urcorner}
 \restoresymbol{ams}{llcorner}
 \restoresymbol{ams}{lrcorner}
+\usepackage{mathtools}
 \makeatletter
 % Must be loaded after MnSymbol!!! MnSymbol improperly defines × and ¬ in such a
 %   way that they don't work in math mode.
@@ -118,8 +119,8 @@
 \DeclareUnicodeCharacter{2296}{\ensuremath{\ominus}}%              ⊖
 }{}
 \DeclareUnicodeCharacter{22C0}{\ensuremath{\bigwedge}}%            ⋀ 
-\DeclareUnicodeCharacter{22C0}{\ensuremath{\bigcupdot}}%           ⋀
-\DeclareUnicodeCharacter{22C1}{\ensuremath{\biguplus}}%            ⋁
+\DeclareUnicodeCharacter{22C0}{\ensuremath{\bigcupdot}}%           ⋀ % TODO?!
+\DeclareUnicodeCharacter{22C1}{\ensuremath{\biguplus}}%            ⋁ % TODO?!
 \DeclareUnicodeCharacter{22C2}{\ensuremath{\bigcap}}%              ⋂
 \DeclareUnicodeCharacter{22C3}{\ensuremath{\bigcup}}%              ⋃
 \DeclareUnicodeCharacter{2A03}{\ensuremath{\bigcupdot}}%           ⨃
@@ -153,49 +154,49 @@
 }
 \DeclareUnicodeCharacter{2A05}{\ensuremath{\bigsqcap}}%            ⨅
 \DeclareUnicodeCharacter{2A06}{\ensuremath{\bigsqcup}}%            ⨆
-\DeclareUnicodeCharacter{2080}{\ensuremath{_0}}%                   ₀
-\DeclareUnicodeCharacter{2081}{\ensuremath{\BeginAccSupp{method=hex,unicode,ActualText=2081}_1\EndAccSupp{}}}%                   ₁
-\DeclareUnicodeCharacter{2082}{\ensuremath{_2}}%                   ₂
-\DeclareUnicodeCharacter{2083}{\ensuremath{_3}}%                   ₃
-\DeclareUnicodeCharacter{2084}{\ensuremath{_4}}%                   ₄
-\DeclareUnicodeCharacter{2085}{\ensuremath{_5}}%                   ₅
-\DeclareUnicodeCharacter{2086}{\ensuremath{_6}}%                   ₆
-\DeclareUnicodeCharacter{2087}{\ensuremath{_7}}%                   ₇
-\DeclareUnicodeCharacter{2088}{\ensuremath{_8}}%                   ₈
-\DeclareUnicodeCharacter{2089}{\ensuremath{_9}}%                   ₉
-\DeclareUnicodeCharacter{208A}{\ensuremath{_+}}%                   ₊
-\DeclareUnicodeCharacter{208B}{\ensuremath{_-}}%                   ₋
-\DeclareUnicodeCharacter{208C}{\ensuremath{_=}}%                   ₌
-\DeclareUnicodeCharacter{208D}{\ensuremath{_(}}%                   ₍
-\DeclareUnicodeCharacter{208E}{\ensuremath{_)}}%                   ₎
-\DeclareUnicodeCharacter{2098}{\ensuremath{_m}}%                   ₘ
-\DeclareUnicodeCharacter{2099}{\ensuremath{_n}}%                   ₙ
-\DeclareUnicodeCharacter{2095}{\ensuremath{_h}}%                   ₕ
-\DeclareUnicodeCharacter{1D62}{\ensuremath{_i}}%                   ᵢ
-\DeclareUnicodeCharacter{2C7C}{\ensuremath{_j}}%                   ⱼ
-\DeclareUnicodeCharacter{2096}{\ensuremath{_k}}%                   ₖ
-\DeclareUnicodeCharacter{2097}{\ensuremath{_l}}%                   ₗ
-\DeclareUnicodeCharacter{209B}{\ensuremath{_s}}%                   ₛ
+\DeclareUnicodeCharacter{2080}{\ensuremath{{}_0}}%                   ₀
+\DeclareUnicodeCharacter{2081}{\ensuremath{\BeginAccSupp{method=hex,unicode,ActualText=2081}{}_1\EndAccSupp{}}}%                   ₁
+\DeclareUnicodeCharacter{2082}{\ensuremath{{}_2}}%                   ₂
+\DeclareUnicodeCharacter{2083}{\ensuremath{{}_3}}%                   ₃
+\DeclareUnicodeCharacter{2084}{\ensuremath{{}_4}}%                   ₄
+\DeclareUnicodeCharacter{2085}{\ensuremath{{}_5}}%                   ₅
+\DeclareUnicodeCharacter{2086}{\ensuremath{{}_6}}%                   ₆
+\DeclareUnicodeCharacter{2087}{\ensuremath{{}_7}}%                   ₇
+\DeclareUnicodeCharacter{2088}{\ensuremath{{}_8}}%                   ₈
+\DeclareUnicodeCharacter{2089}{\ensuremath{{}_9}}%                   ₉
+\DeclareUnicodeCharacter{208A}{\ensuremath{{}_+}}%                   ₊
+\DeclareUnicodeCharacter{208B}{\ensuremath{{}_-}}%                   ₋
+\DeclareUnicodeCharacter{208C}{\ensuremath{{}_=}}%                   ₌
+\DeclareUnicodeCharacter{208D}{\ensuremath{{}_(}}%                   ₍
+\DeclareUnicodeCharacter{208E}{\ensuremath{{}_)}}%                   ₎
+\DeclareUnicodeCharacter{2098}{\ensuremath{{}_m}}%                   ₘ
+\DeclareUnicodeCharacter{2099}{\ensuremath{{}_n}}%                   ₙ
+\DeclareUnicodeCharacter{2095}{\ensuremath{{}_h}}%                   ₕ
+\DeclareUnicodeCharacter{1D62}{\ensuremath{{}_i}}%                   ᵢ
+\DeclareUnicodeCharacter{2C7C}{\ensuremath{{}_j}}%                   ⱼ
+\DeclareUnicodeCharacter{2096}{\ensuremath{{}_k}}%                   ₖ
+\DeclareUnicodeCharacter{2097}{\ensuremath{{}_l}}%                   ₗ
+\DeclareUnicodeCharacter{209B}{\ensuremath{{}_s}}%                   ₛ
 %
-\DeclareUnicodeCharacter{2070}{\ensuremath{^0}}%                   ⁰
-%\DeclareUnicodeCharacter{00B9}{\ensuremath{^1}}%                   ¹
-%\DeclareUnicodeCharacter{00B2}{\ensuremath{^2}}%                   ²
-%\DeclareUnicodeCharacter{00B3}{\ensuremath{^3}}%                   ³
-\DeclareUnicodeCharacter{2074}{\ensuremath{^4}}%                   ⁴
-\DeclareUnicodeCharacter{2075}{\ensuremath{^5}}%                   ⁵
-\DeclareUnicodeCharacter{2076}{\ensuremath{^6}}%                   ⁶
-\DeclareUnicodeCharacter{2077}{\ensuremath{^7}}%                   ⁷
-\DeclareUnicodeCharacter{2078}{\ensuremath{^8}}%                   ⁸
-\DeclareUnicodeCharacter{2079}{\ensuremath{^9}}%                   ⁹
-\DeclareUnicodeCharacter{207A}{\ensuremath{^+}}%                   ⁺
-\DeclareUnicodeCharacter{207B}{\ensuremath{^-}}%                   ⁻
-\DeclareUnicodeCharacter{207C}{\ensuremath{^=}}%                   ⁼
-\DeclareUnicodeCharacter{207D}{\ensuremath{^(}}%                   ⁽
-\DeclareUnicodeCharacter{207E}{\ensuremath{^)}}%                   ⁾
-\DeclareUnicodeCharacter{207F}{\ensuremath{^n}}%                   ⁿ
-\DeclareUnicodeCharacter{2071}{\ensuremath{^i}}%                   ⁱ
-\DeclareUnicodeCharacter{02B2}{\ensuremath{^j}}%                   ʲ
-\DeclareUnicodeCharacter{1D4F}{\ensuremath{^k}}%                   ᵏ
+\DeclareUnicodeCharacter{2070}{\ensuremath{{}^0}}%                   ⁰
+%\DeclareUnicodeCharacter{00B9}{\ensuremath{{}^1}}%                   ¹
+%\DeclareUnicodeCharacter{00B2}{\ensuremath{{}^2}}%                   ²
+%\DeclareUnicodeCharacter{00B3}{\ensuremath{{}^3}}%                   ³
+\DeclareUnicodeCharacter{2074}{\ensuremath{{}^4}}%                   ⁴
+\DeclareUnicodeCharacter{2075}{\ensuremath{{}^5}}%                   ⁵
+\DeclareUnicodeCharacter{2076}{\ensuremath{{}^6}}%                   ⁶
+\DeclareUnicodeCharacter{2077}{\ensuremath{{}^7}}%                   ⁷
+\DeclareUnicodeCharacter{2078}{\ensuremath{{}^8}}%                   ⁸
+\DeclareUnicodeCharacter{2079}{\ensuremath{{}^9}}%                   ⁹
+\DeclareUnicodeCharacter{207A}{\ensuremath{{}^+}}%                   ⁺
+\DeclareUnicodeCharacter{207B}{\ensuremath{{}^-}}%                   ⁻
+\DeclareUnicodeCharacter{207C}{\ensuremath{{}^=}}%                   ⁼
+\DeclareUnicodeCharacter{207D}{\ensuremath{{}^(}}%                   ⁽
+\DeclareUnicodeCharacter{207E}{\ensuremath{{}^)}}%                   ⁾
+\DeclareUnicodeCharacter{207F}{\ensuremath{{}^n}}%                   ⁿ
+\DeclareUnicodeCharacter{2071}{\ensuremath{{}^i}}%                   ⁱ
+\DeclareUnicodeCharacter{02B2}{\ensuremath{{}^j}}%                   ʲ
+\DeclareUnicodeCharacter{1D4F}{\ensuremath{{}^k}}%                   ᵏ
 %s
 \DeclareUnicodeCharacter{2026}{\ensuremath{\dots}}%                …
 
@@ -341,8 +342,13 @@
 \DeclareUnicodeCharacter{3C3}{\ensuremath{\sigma}}%                σ
 \DeclareUnicodeCharacter{2254}{\ensuremath{\coloneqq}}%            ≔
 \DeclareUnicodeCharacter{2A74}{\ensuremath{\Coloneqq}}%            ⩴
-\DeclareUnicodeCharacter{2184}{\ensuremath{$\reflectbox{$c$}$}}%   ↄ % TODO: \ifmmode
-\DeclareUnicodeCharacter{A7FB}{\ensuremath{$\reflectbox{$F$}$}}%   ꟻ
-\DeclareUnicodeCharacter{A7FB}{\ensuremath{$\raisebox{\depth}{\rotatebox{180}{a}}$}}%   ɐ % TODO: \ifmmode
+\DeclareUnicodeCharacter{2184}{\ensuremath{\reflectbox{$c$}}}%     ↄ % TODO: \ifmmode
+\DeclareUnicodeCharacter{A7FB}{\ensuremath{\reflectbox{$F$}}}%     ꟻ
+\DeclareUnicodeCharacter{250}{\ensuremath{\raisebox{\depth}{\rotatebox{180}{a}}}}%   ɐ % TODO: \ifmmode
+\DeclareUnicodeCharacter{393}{\ensuremath{\Gamma}}%                Γ
+\DeclareUnicodeCharacter{22A2}{\ensuremath{\vdash}}%               ⊢
+\DeclareUnicodeCharacter{21AA}{\ensuremath{\hookrightarrow}}%      ↪
+\DeclareUnicodeCharacter{2204}{\ensuremath{\nexists}}%             ∄
+\DeclareUnicodeCharacter{3C6}{\ensuremath{\phi}}%                  φ
 \makeatother
 }>>>|)
