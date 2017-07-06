@@ -350,5 +350,8 @@
 \DeclareUnicodeCharacter{21AA}{\ensuremath{\hookrightarrow}}%      ↪
 \DeclareUnicodeCharacter{2204}{\ensuremath{\nexists}}%             ∄
 \DeclareUnicodeCharacter{3C6}{\ensuremath{\phi}}%                  φ
+\DeclareUnicodeCharacter{3BA}{\ensuremath{\kappa}}%                κ
+\DeclareUnicodeCharacter{3B7}{\ensuremath{\eta}}%                  η
+\DeclareUnicodeCharacter{22A4}{\ensuremath{\top}}%                 ⊤
 \makeatother
 }>>>|)
