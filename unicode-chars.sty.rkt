@@ -363,5 +363,45 @@
 \DeclareUnicodeCharacter{3B2}{\ensuremath{\beta}}%                 β
 \DeclareUnicodeCharacter{2772}{\tikz[baseline=0.2ex]\draw[line cap=round] (0,0) ++(-30:0.7ex) -- ++(-30:-0.7ex) -- ++(0,1.6ex) -- ++(30:0.7ex) {};}%           ❲
 \DeclareUnicodeCharacter{2773}{\tikz[baseline=0.2ex]\draw[line cap=round] (0,0) ++(-150:0.7ex) -- ++(-150:-0.7ex) -- ++(0,1.6ex) -- ++(150:0.7ex) {};}%        ❳
+\def\mediumlangle{%
+  \rlap{$\langle$}\kern 0.1pt%
+  \rlap{$\langle$}\kern 0.1pt%
+  \rlap{$\langle$}\kern 0.1pt%
+  \rlap{$\langle$}\kern 0.1pt%
+  \rlap{$\langle$}\kern 0.1pt%
+  \rlap{$\langle$}\kern 0.1pt%
+  \langle%
+}
+\def\mediumrangle{%
+  \rlap{$\rangle$}\kern 0.1pt%
+  \rlap{$\rangle$}\kern 0.1pt%
+  \rlap{$\rangle$}\kern 0.1pt%
+  \rlap{$\rangle$}\kern 0.1pt%
+  \rlap{$\rangle$}\kern 0.1pt%
+  \rlap{$\rangle$}\kern 0.1pt%
+  \rangle%
+}
+\def\boldlangle{%
+  \rlap{$\langle$}\kern 0.1pt\rlap{$\langle$}\kern 0.1pt%
+  \rlap{$\langle$}\kern 0.1pt\rlap{$\langle$}\kern 0.1pt%
+  \rlap{$\langle$}\kern 0.1pt\rlap{$\langle$}\kern 0.1pt%
+  \rlap{$\langle$}\kern 0.1pt\rlap{$\langle$}\kern 0.1pt%
+  \rlap{$\langle$}\kern 0.1pt\rlap{$\langle$}\kern 0.1pt%
+  \rlap{$\langle$}\kern 0.1pt\rlap{$\langle$}\kern 0.1pt%
+  \langle%
+}
+\def\boldrangle{%
+  \rlap{$\rangle$}\kern 0.1pt\rlap{$\rangle$}\kern 0.1pt%
+  \rlap{$\rangle$}\kern 0.1pt\rlap{$\rangle$}\kern 0.1pt%
+  \rlap{$\rangle$}\kern 0.1pt\rlap{$\rangle$}\kern 0.1pt%
+  \rlap{$\rangle$}\kern 0.1pt\rlap{$\rangle$}\kern 0.1pt%
+  \rlap{$\rangle$}\kern 0.1pt\rlap{$\rangle$}\kern 0.1pt%
+  \rlap{$\rangle$}\kern 0.1pt\rlap{$\rangle$}\kern 0.1pt%
+  \rangle%
+}
+\DeclareUnicodeCharacter{276C}{\ensuremath{\mediumlangle}}%        ❬
+\DeclareUnicodeCharacter{276D}{\ensuremath{\mediumrangle}}%        ❭
+\DeclareUnicodeCharacter{2770}{\ensuremath{\boldlangle}}%          ❰
+\DeclareUnicodeCharacter{2771}{\ensuremath{\boldrangle}}%          ❱
 \makeatother
 }>>>|)
