@@ -36,6 +36,10 @@
 \restoresymbol{ams}{lrcorner}
 \usepackage{mathtools}
 \usepackage{tikz}
+% rename mathabx's version of triangleright
+\let\mathabxtriangleright\triangleright
+% restore symbol overridden by mathabx in Scribble's preamble to the default one
+\def\triangleright{\mathchar"212E}
 \makeatletter
 % Must be loaded after MnSymbol!!! MnSymbol improperly defines × and ¬ in such a
 %   way that they don't work in math mode.
