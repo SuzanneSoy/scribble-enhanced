@@ -10,7 +10,7 @@
 
 @defmodule[scribble-enhanced]
 
-@section{@racket[defform] enhancements}
+@section{@defidform/inline[defform] enhancements}
 
 @subsection{Easy rendering of quotes and syntax reader abbreviations}
 
@@ -182,7 +182,7 @@ The code above renders as follows:
  generated the form currently rendering the code. The most useful argument is
  @racket[uncode], indicating which identifier should be used in place of
  @racket[unsyntax] to escape the current form, which will be
- @racket[racketblock], @racket[RACKETBLOCK] or another similar form.
+ @defidform/inline[racketblock], @defidform/inline[RACKETBLOCK], @defidform/inline[racket],  or another similar form.
 
  The function must return a syntax object which will be spliced in place of the
  original when rendering. Note that the returned syntax object will be spliced,
