@@ -92,7 +92,7 @@
 \DeclareUnicodeCharacter{21A6}{\ensuremath{\mapsto}}%              ↦
 \DeclareUnicodeCharacter{21C0}{\ensuremath{\rightharpoonup}}%      ⇀
 \DeclareUnicodeCharacter{21D2}{\ensuremath{\Rightarrow}}%          ⇒
-% Georges — added \operatorname{} in ∀ .
+% Suzanne — added \operatorname{} in ∀ .
 \DeclareUnicodeCharacter{2200}{\ensuremath{\operatorname{\BeginAccSupp{method=hex,unicode,ActualText=2200}\forall\EndAccSupp{}}}}% ∀
 \DeclareUnicodeCharacter{2203}{\ensuremath{\exists}}%              ∃
 \DeclareUnicodeCharacter{2208}{\ensuremath{\in}}%                  ∈
