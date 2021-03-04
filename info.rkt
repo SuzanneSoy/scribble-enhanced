@@ -23,4 +23,4 @@
 (define test-omit-paths '("resources/"))
 (define pkg-desc "Enhancements for the scribble language")
 (define version "0.3")
-(define pkg-authors '(|Georges Dupéron|))
+(define pkg-authors '(|Suzanne Soy|))

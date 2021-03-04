@@ -139,7 +139,7 @@
 \DeclareUnicodeCharacter{27F7}{\ensuremath{\longleftrightarrow}}%  ⟷
 \DeclareUnicodeCharacter{27F9}{\ensuremath{\Longrightarrow}}%      ⟹
 %
-% Additions by Georges Dupéron
+% Additions by Suzanne Soy
 \DeclareUnicodeCharacter{2237}{\ensuremath{\dblcolon}}%            ∷
 \DeclareUnicodeCharacter{228F}{\ensuremath{\sqsubset}}%            ⊏
 \DeclareUnicodeCharacter{2290}{\ensuremath{\sqsubset}}%            ⊐

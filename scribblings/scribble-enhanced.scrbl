@@ -6,7 +6,7 @@
          scribble-enhanced]
 
 @title{Scribble Enhanced}
-@author{Georges Dupéron}
+@author{Suzanne Soy}
 
 @defmodule[scribble-enhanced]
 
