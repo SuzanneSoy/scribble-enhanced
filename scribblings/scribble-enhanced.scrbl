@@ -6,7 +6,7 @@
          scribble-enhanced]
 
 @title{Scribble Enhanced}
-@author{Suzanne Soy}
+@author[@author+email["Suzanne Soy" "racket@suzanne.soy"]]
 
 @defmodule[scribble-enhanced]
 
