@@ -7,7 +7,7 @@
                "compatibility-lib"
                "slideshow-lib"
                "typed-racket-lib"
-               "reprovide-lang"
+               "reprovide-lang-lib"
                "mutable-match-lambda"))
 (define build-deps '("scribble-lib"
                      "racket-doc"
