@@ -23,4 +23,5 @@
 (define test-omit-paths '("resources/"))
 (define pkg-desc "Enhancements for the scribble language")
 (define version "0.3")
+(define license 'LGPL-3.0-or-later)
 (define pkg-authors '(|Suzanne Soy|))
