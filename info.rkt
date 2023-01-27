@@ -7,7 +7,7 @@
                "compatibility-lib"
                "slideshow-lib"
                "typed-racket-lib"
-               "reprovide-lang"
+               "reprovide-lang-lib"
                "mutable-match-lambda"))
 (define build-deps '("scribble-lib"
                      "racket-doc"
@@ -23,4 +23,5 @@
 (define test-omit-paths '("resources/"))
 (define pkg-desc "Enhancements for the scribble language")
 (define version "0.3")
+(define license 'LGPL-3.0-or-later)
 (define pkg-authors '(|Suzanne Soy|))
